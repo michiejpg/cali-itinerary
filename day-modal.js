@@ -1,7 +1,7 @@
 /**
  * Per-day question modal. Answers saved in localStorage (any non-empty submit dismisses).
  */
-function dayModalInit(dayId, questionText) {
+function dayModalInit(dayId, questionText, expectedAnswer) {
   const overlay = document.getElementById("day-modal");
   const questionEl = document.getElementById("modal-question");
   const input = document.getElementById("modal-answer");
@@ -32,6 +32,17 @@ function dayModalInit(dayId, questionText) {
     e.preventDefault();
     const answer = (input.value || "").trim();
     if (!answer) {
+      input.focus();
+      return;
+    }
+    if (
+      typeof expectedAnswer === "string" &&
+      expectedAnswer.trim() &&
+      answer.toLowerCase() !== expectedAnswer.trim().toLowerCase()
+    ) {
+      input.setCustomValidity("Try again ✨");
+      input.reportValidity();
+      input.setCustomValidity("");
       input.focus();
       return;
     }
