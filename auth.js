@@ -1,5 +1,7 @@
 /**
  * Trip gate: set TRIP_PASSWORD to your secret before sharing the site.
+ * Unlock is stored in sessionStorage for the tab (survives index ↔ day navigation;
+ * clears when the tab/window is closed).
  * Note: client-side protection is for casual privacy only, not security.
  */
 const TRIP_PASSWORD = "bananacream";
