@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Cali week ✨ Aug 4–11, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="b1"></span><span class="b2"></span><span class="b3"></span>
+    </div>
+
+    <div id="lock-screen" class="lock-screen" role="dialog" aria-labelledby="lock-title">
+      <div class="lock-card">
+        <div class="mascot" aria-hidden="true">🐚🌴</div>
+        <h2 id="lock-title">EDM's California Adventure</h2>
+        <p>Enter the trip password to see our California adventure week.</p>
+        <p class="password-hint">Hint: our gc name</p>
+        <form id="unlock-form">
+          <label class="visually-hidden" for="trip-password">Trip password</label>
+          <input
+            id="trip-password"
+            type="password"
+            name="password"
+            placeholder="Your magic word…"
+            autocomplete="current-password"
+            required
+          />
+          <p id="lock-error" class="lock-error" role="alert"></p>
+          <button type="submit" class="btn">Unlock the fun 🌸</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="main-content" class="wrap main-hidden">
+      <header style="text-align: center; margin-bottom: 0.5rem">
+        <svg width="120" height="72" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="max-width: 100%">
+          <ellipse cx="60" cy="58" rx="50" ry="8" fill="#E8D5FF" opacity="0.6"/>
+          <circle cx="88" cy="22" r="14" fill="#FFE066"/>
+          <path d="M20 48 Q35 38 50 48 T80 48" stroke="#FFB7C5" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M25 52 Q40 45 55 52" stroke="#B8F2E6" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <text x="60" y="68" text-anchor="middle" font-size="10" font-family="Fredoka, sans-serif" fill="#5C4A6B">Aug 4 – 11</text>
+        </svg>
+      </header>
+      <h1>California dream week</h1>
+      <p class="subtitle">August 4 – 11, 2026 · tap a day for the plan</p>
+
+      <div class="card">
+        <h2><span aria-hidden="true">📅</span> Your days</h2>
+        <nav class="day-grid" aria-label="Itinerary by date">
+          <a class="day-link" href="aug-04.html">
+            <span class="emoji" aria-hidden="true">✈️</span>
+            Tue 4
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-05.html">
+            <span class="emoji" aria-hidden="true">🌊</span>
+            Wed 5
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-06.html">
+            <span class="emoji" aria-hidden="true">🍦</span>
+            Thu 6
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-07.html">
+            <span class="emoji" aria-hidden="true">🎡</span>
+            Fri 7
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-08.html">
+            <span class="emoji" aria-hidden="true">🌮</span>
+            Sat 8
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-09.html">
+            <span class="emoji" aria-hidden="true">🌅</span>
+            Sun 9
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-10.html">
+            <span class="emoji" aria-hidden="true">🛍️</span>
+            Mon 10
+            <small>Aug 2026</small>
+          </a>
+          <a class="day-link" href="aug-11.html">
+            <span class="emoji" aria-hidden="true">💕</span>
+            Tue 11
+            <small>Aug 2026</small>
+          </a>
+        </nav>
+      </div>
+
+      <p class="footer-doodle" aria-hidden="true">🌺 · ✨ · 🦀</p>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+      initIndexGate();
+    </script>
+  </body>
+</html>

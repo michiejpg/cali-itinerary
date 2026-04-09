@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fri Aug 7, 2026 · Cali trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="b1"></span><span class="b2"></span><span class="b3"></span>
+    </div>
+
+    <div class="wrap">
+      <a class="nav-back" href="index.html">← All days</a>
+      <h1>Friday, August 7</h1>
+      <p class="subtitle">Play day energy</p>
+
+      <div class="card">
+        <h2><span aria-hidden="true">🎡</span> Today’s flow</h2>
+        <ul>
+          <li>One “main event” — pier, aquarium, or mini golf (pick your adventure)</li>
+          <li>Lunch somewhere with a view if we can swing it</li>
+          <li>Golden hour photos &amp; silly poses</li>
+          <li>Dinner: something shareable &amp; loud with laughter</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2><span aria-hidden="true">🎟️</span> Tiny notes</h2>
+        <p>Wear comfy shoes; we’ll be on our feet a bunch.</p>
+      </div>
+
+      <p class="footer-doodle" aria-hidden="true">🎠 · 🌈 · 🍿</p>
+    </div>
+
+    <div
+      id="day-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-labelledby="modal-q-title"
+      aria-modal="true"
+    >
+      <div class="modal">
+        <div class="modal-deco" aria-hidden="true">🎢</div>
+        <h3 id="modal-q-title">Adventure pick</h3>
+        <p class="question" id="modal-question"></p>
+        <form id="modal-form">
+          <label class="visually-hidden" for="modal-answer">Your answer</label>
+          <input
+            type="text"
+            id="modal-answer"
+            class="answer-input"
+            placeholder="Type your answer here…"
+            autocomplete="off"
+          />
+          <div class="btn-row">
+            <button type="submit" class="btn">OK cutie ✨</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+      requireAuth();
+    </script>
+    <script src="day-modal.js"></script>
+    <script>
+      dayModalInit(
+        "aug07",
+        "What’s one silly photo pose we HAVE to try before the sun goes down?"
+      );
+    </script>
+  </body>
+</html>
