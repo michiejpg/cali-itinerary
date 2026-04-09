@@ -36,10 +36,13 @@ body {
   color: var(--text);
   background: linear-gradient(
     168deg,
-    #fef6ff 0%,
-    var(--lavender) 28%,
-    var(--peach-glow) 52%,
-    #ffd6e8 78%,
+    #fff5ec 0%,
+    var(--peach-glow) 16%,
+    var(--lavender) 30%,
+    var(--apricot) 42%,
+    var(--orange) 54%,
+    var(--peach-glow) 66%,
+    #ffd6e8 82%,
     var(--purple-soft) 100%
   );
   background-attachment: fixed;
