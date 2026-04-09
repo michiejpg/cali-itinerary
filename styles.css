@@ -118,6 +118,14 @@ h1 {
   margin: 0 0 2rem;
 }
 
+.time-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin: -1.35rem 0 1.3rem;
+  font-style: italic;
+}
+
 /* Cards */
 .card {
   background: var(--white);
@@ -145,6 +153,68 @@ h1 {
 .card ul {
   margin: 0;
   padding-left: 1.25rem;
+}
+
+.day-timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+  position: relative;
+}
+
+.day-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--pink), var(--orange), var(--purple-soft));
+}
+
+.day-timeline li {
+  position: relative;
+  margin: 0 0 0.95rem 0;
+  padding: 0.05rem 0 0.05rem 1.7rem;
+}
+
+.day-timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.day-timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: var(--pink-deep);
+  box-shadow: 0 0 0 2px rgba(244, 143, 184, 0.25);
+}
+
+.timeline-item {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.82);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 0.85rem;
+  padding: 0.5rem 0.65rem;
+  box-shadow: 0 3px 12px rgba(180, 130, 200, 0.12);
+}
+
+.timeline-title {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timeline-meta {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.92rem;
 }
 
 /* Day grid on home */
