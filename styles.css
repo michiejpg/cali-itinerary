@@ -385,6 +385,7 @@ h1 {
 
 .modal .btn-row {
   display: flex;
+  gap: 0.6rem;
   justify-content: center;
 }
 
