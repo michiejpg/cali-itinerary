@@ -38,7 +38,12 @@ function dayModalInit(dayId, questionText, expectedAnswer) {
 
     if (expectedAnswer) {
       const normalize = (text) => text.trim().toLowerCase().replace(/\s+/g, " ");
-      if (normalize(answer) !== normalize(expectedAnswer)) {
+      const normalizedAnswer = normalize(answer);
+      const valid =
+        Array.isArray(expectedAnswer)
+          ? expectedAnswer.some((ea) => normalize(ea) === normalizedAnswer)
+          : normalizedAnswer === normalize(expectedAnswer);
+      if (!valid) {
         input.value = "";
         input.placeholder = "Not quite, try again...";
         input.focus();
