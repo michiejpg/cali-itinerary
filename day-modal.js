@@ -1,5 +1,5 @@
 /**
- * Per-day question modal. Answers saved in localStorage (any non-empty submit dismisses).
+ * Per-day question modal. Shown on every page load; correct answer dismisses until next visit.
  */
 function dayModalInit(dayId, questionText, expectedAnswer) {
   const overlay = document.getElementById("day-modal");
@@ -7,16 +7,10 @@ function dayModalInit(dayId, questionText, expectedAnswer) {
   const input = document.getElementById("modal-answer");
   const form = document.getElementById("modal-form");
   const cancelBtn = document.getElementById("modal-cancel");
-  const storageKey = `caliDayModal_${dayId}`;
 
   if (!overlay || !questionEl || !input || !form) return;
 
   questionEl.textContent = questionText;
-
-  if (localStorage.getItem(storageKey)) {
-    overlay.classList.add("hidden");
-    return;
-  }
 
   const dismiss = () => {
     overlay.classList.add("hidden");
@@ -51,11 +45,6 @@ function dayModalInit(dayId, questionText, expectedAnswer) {
       }
     }
 
-    try {
-      localStorage.setItem(storageKey, JSON.stringify({ answer, at: Date.now() }));
-    } catch (_) {
-      localStorage.setItem(storageKey, "1");
-    }
     dismiss();
   });
 
