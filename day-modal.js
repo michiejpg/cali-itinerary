@@ -35,17 +35,17 @@ function dayModalInit(dayId, questionText, expectedAnswer) {
       input.focus();
       return;
     }
-    if (
-      typeof expectedAnswer === "string" &&
-      expectedAnswer.trim() &&
-      answer.toLowerCase() !== expectedAnswer.trim().toLowerCase()
-    ) {
-      input.setCustomValidity("Try again ✨");
-      input.reportValidity();
-      input.setCustomValidity("");
-      input.focus();
-      return;
+
+    if (expectedAnswer) {
+      const normalize = (text) => text.trim().toLowerCase().replace(/\s+/g, " ");
+      if (normalize(answer) !== normalize(expectedAnswer)) {
+        input.value = "";
+        input.placeholder = "Not quite, try again...";
+        input.focus();
+        return;
+      }
     }
+
     try {
       localStorage.setItem(storageKey, JSON.stringify({ answer, at: Date.now() }));
     } catch (_) {
